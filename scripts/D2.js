@@ -170,11 +170,13 @@ if (anotherNumber % 2 === 0) {
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
-let val = 7
+let val = 3
 if (val < 10) {
-  console.log('Meno di 10')
-} else if (val < 5) {
-  console.log('Meno di 5')
+  if (val < 5) {
+    console.log('Meno di 5')
+  } else {
+    console.log('Meno di 10')
+  }
 } else {
   console.log('Uguale a 10 o maggiore')
 }
