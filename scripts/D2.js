@@ -71,7 +71,7 @@ if (n1 === 8 || n2 === 8 || n1 + n2 === 8 || n1 - n2 === 8 || n2 - n1 === 8) {
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 let shippingCosts = 10
-let totalShoppingCart = 40
+let totalShoppingCart = 65
 let checkout
 
 if (totalShoppingCart > 50) {
@@ -88,15 +88,14 @@ if (totalShoppingCart > 50) {
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-let blackFridayCheckout
+let blackFridayCheckout = totalShoppingCart * 0.8
 
-if (totalShoppingCart > 50) {
-  blackFridayCheckout = totalShoppingCart - 0.2 * totalShoppingCart
-  console.log('Totale da pagare: ', blackFridayCheckout)
+if (blackFridayCheckout > 50) {
+  checkout = blackFridayCheckout
+  console.log('Totale da pagare: ', checkout)
 } else {
-  blackFridayCheckout =
-    totalShoppingCart - 0.2 * totalShoppingCart + shippingCosts
-  console.log('Totale da pagare: ', blackFridayCheckout)
+  checkout = blackFridayCheckout + shippingCosts
+  console.log('Totale da pagare con il BlakFriday: ', checkout)
 }
 
 /* ESERCIZIO 7
@@ -107,27 +106,25 @@ if (totalShoppingCart > 50) {
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
-let x1 = 2
+let x1 = 3
 let x2 = 3
-let x3 = 1
+let x3 = 3
 
-let y //utilizzo una variabile contenitore per scambiare i valori delle tre variabili
-
-if (x1 > x2) {
-  if (x2 > x3) {
+if (x1 >= x2) {
+  if (x2 >= x3) {
     console.log(x1, x2, x3)
-  } else if (x1 > x3) {
-    console.log(x1, x3, x2)
-  } else {
+  } else if (x1 <= x3) {
     console.log(x3, x1, x2)
-  }
-} else if (x1 < x2) {
-  if (x2 < x3) {
-    console.log(x3, x2, x1)
-  } else if (x1 < x3) {
-    console.log(x2, x3, x1)
   } else {
+    console.log(x1, x3, x2)
+  }
+} else if (x1 <= x2) {
+  if (x2 <= x3) {
+    console.log(x3, x2, x1)
+  } else if (x1 >= x3) {
     console.log(x2, x1, x3)
+  } else if (x1 <= x3) {
+    console.log(x2, x3, x1)
   }
 }
 
