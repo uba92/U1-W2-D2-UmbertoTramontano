@@ -54,9 +54,7 @@ let n1 = 15
 let n2 = 7
 
 if (n1 === 8 || n2 === 8 || n1 + n2 === 8 || n1 - n2 === 8 || n2 - n1 === 8) {
-  console.log(
-    'Uno dei due numeri è uguale a 8 oppure la loro somma o sottrazione dà 8 come risultato!'
-  )
+  console.log('VERIFIED')
 }
 //cambiando il valore di n1, di n2 o di entrambi in modo che nessuno di essi sia uguale a 8
 // o in modo che l'addizione/sottrazione tra essi sia diversa da 8
